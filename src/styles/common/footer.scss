@@ -1,0 +1,213 @@
+.footer{
+  border-top: 1px solid rgba(24, 24, 24, 0.25);
+  margin-top: auto;
+  background: linear-gradient(90deg, #FFF 0%, #FFF 50%, #EEF3F1 50%, #EEF3F1 100%);
+  &-main{
+    display: flex;
+  }
+  &-left{
+    flex: 1 1 calc(100% - 380px);
+    background-color: #FFF;
+    padding-right: 40px;
+    &-top{
+      padding-top: 40px;
+      padding-bottom: 32px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(24, 24, 24, 0.25);;
+      &-linklist{
+        margin: auto;
+        &__link{
+          font-size: 16px;
+          line-height: 18px;
+          color: rgba(0, 0, 0, 0.75);
+          &:not(:last-child){
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+    &-grid{
+      padding-top: 40px;
+      padding-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      grid-template-areas:  "col-1 col-2 col-3 col-5"  
+                            "col-1 col-2 col-4 col-5";
+    }
+    &-col{
+      &:not(:last-child){
+        padding-right: 20px;
+      }
+      &:nth-child(1){
+        grid-area: col-1;
+      }
+      &:nth-child(2){
+        grid-area: col-2;
+      }
+      &:nth-child(3){
+        grid-area: col-3;
+      }
+      &:nth-child(4){
+        grid-area: col-4;
+      }
+      &:nth-child(5){
+        grid-area: col-5;
+      }
+      &__title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(0, 0, 0, 0.75);
+        margin-bottom: 20px;
+      }
+      &__link{
+        font-size: 14px;
+        line-height: 125%;
+        color: var(--half);
+        display: block;
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  &-right{
+    flex: 1 1 380px;
+    padding-left: 40px;
+    background-color: #EEF3F1;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+    &__phone{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      display: block;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    &__call{
+      align-self: flex-start;
+    }
+    &__address{
+      font-size: 16px;
+      line-height: 150%;
+      margin-top: 40px;
+    }
+    &-bot{
+      margin-top: auto;
+    }
+    &__link{
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 10px;
+        width: 16px;
+      }
+      color: var(--dark);
+    }
+    &-social{
+      padding-top: 40px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(24, 24, 24, 0.25);;
+      &__title{
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 18px;
+      }
+      &__link{
+        display: inline-block;
+        &:not(:last-child){
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+.copyright{
+  background: #F5F5F5;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &-container{
+    display: flex;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--half);
+    a{
+      text-decoration: underline;
+    }
+    &:not(:last-child){
+      margin-right: 40px;
+    }
+    &:last-child{
+      margin-left: auto;
+    }
+  } 
+}
+
+.billet{
+  transform: translateY(100%);
+  transition: .3s;
+  &_active{
+    transform: none;
+  }
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  .container{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+  &-preview{
+    width: 76px;
+    height: 58px;
+    position: relative;
+    margin-right: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-desc{
+    &__title{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: var(--dark);
+    }
+    &__text{ 
+      font-size: 16px;
+      line-height: 18px;
+      color: var(--half);
+    }
+  }
+  .btn{
+    margin-left: auto;
+    margin-right: 80px;
+  }
+  &__close{
+    cursor: pointer;
+    padding: 10px;
+    margin: -10px;
+  }
+}

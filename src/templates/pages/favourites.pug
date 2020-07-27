@@ -1,0 +1,15 @@
+extends ../template
+block title
+  | Избранное | 8 соток
+block content
+  section.breadcrumbs
+    .container
+      .breadcrumbs-row
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Избранное
+  section.container
+    h1.default__title Избранное
+    .items-grid    
+      include ../common/card
+      include ../common/card
+  include ../common/putCall

@@ -1,0 +1,104 @@
+extends ../template
+block title
+  | Карточка участка | 8 соток
+block content
+  section.breadcrumbs
+    .container
+      .breadcrumbs-row
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Карточка участка
+  section.itemCard
+    .itemCard-slider-outer
+      .container.itemCard-containerArr
+        button.itemCard-containerArr__arr.itemCard-containerArr__arr_prev
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13L1 7L7 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        button.itemCard-containerArr__arr.itemCard-containerArr__arr_next
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      .itemCard-slider
+        .itemCard-slider__slide
+          img(src="assets/images/itemCard.jpg", alt="")
+        .itemCard-slider__slide
+          img(src="assets/images/itemCard.jpg", alt="")
+        .itemCard-slider__slide
+          img(src="assets/images/itemCard.jpg", alt="")
+        .itemCard-slider__slide
+          img(src="assets/images/itemCard.jpg", alt="")
+    .itemCard-articles
+      article.itemCard-block
+        .itemCard-block-top
+          p.itemCard-block-top__price 130 000 000 руб.
+          p.itemCard-block-top__sale 
+            <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.32967 1V10M4.32967 10L7.65934 7M4.32967 10L1 7" stroke="#207561" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            | 50 000 руб
+          p.itemCard-block-top__where 
+            <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5 5.44444C9.5 7.21061 8.34578 9.23335 7.10121 10.879C6.48979 11.6874 5.87719 12.3784 5.41708 12.8675C5.2571 13.0375 5.1159 13.1828 5 13.2997C4.88411 13.1828 4.7429 13.0375 4.58292 12.8675C4.12281 12.3784 3.51021 11.6874 2.89879 10.879C1.65422 9.23335 0.5 7.21061 0.5 5.44444C0.5 2.67277 2.55395 0.5 5 0.5C7.44605 0.5 9.5 2.67277 9.5 5.44444Z" stroke="#589167"/>
+              <circle cx="5" cy="5" r="1.5" stroke="#589167"/>
+            </svg>
+            | КП “Дворцовые предместья”
+          a(href="#").itemCard-block-top__map На карте
+        .itemCard-block-bot
+          .itemCard-block-bot-col
+            p.itemCard-block-bot-col__title 70 м2
+            p.itemCard-block-bot-col__text Общая
+          .itemCard-block-bot-col
+            p.itemCard-block-bot-col__title 1,9 сот.
+            p.itemCard-block-bot-col__text Участок
+          .itemCard-block-bot-col
+            p.itemCard-block-bot-col__title Блочный
+            p.itemCard-block-bot-col__text Тип дома
+          .itemCard-block-bot-col
+            p.itemCard-block-bot-col__title 2
+            p.itemCard-block-bot-col__text Этажей в доме
+          button.btn.itemCard-block-bot__btn Оставить заявку
+          a(href="#" data-favourites="").header-dop__link.header-dop__link_favourites.itemCard-block-bot__link
+            <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.9298 2.41452C17.4815 1.96607 16.9493 1.61034 16.3636 1.36763C15.7778 1.12492 15.15 1 14.516 1C13.8819 1 13.2541 1.12492 12.6683 1.36763C12.0826 1.61034 11.5504 1.96607 11.1022 2.41452L10.1719 3.34476L9.24167 2.41452C8.33627 1.50912 7.10828 1.00047 5.82786 1.00047C4.54743 1.00047 3.31945 1.50912 2.41405 2.41452C1.50865 3.31992 1 4.5479 1 5.82833C1 7.10875 1.50865 8.33674 2.41405 9.24214L3.34429 10.1724L10.1719 17L16.9995 10.1724L17.9298 9.24214C18.3782 8.79391 18.7339 8.26171 18.9767 7.67596C19.2194 7.0902 19.3443 6.46237 19.3443 5.82833C19.3443 5.19428 19.2194 4.56645 18.9767 3.9807C18.7339 3.39494 18.3782 2.86275 17.9298 2.41452V2.41452Z" stroke="#DA4302" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+          a(href="#" data-compare="").header-dop__link.header-dop__link_compare.itemCard-block-bot__link
+            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 17V7" stroke="#DA4302" stroke-width="2" stroke-linecap="square"/>
+              <path d="M7 17V1" stroke="#DA4302" stroke-width="2" stroke-linecap="square"/>
+              <path d="M1 17V11" stroke="#DA4302" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+      article.itemCard-block
+        h3.itemCard-block__title Описание
+        p Продается таунхаус в КП Фёдоровское, общей площадью 82.80 кв.м., участок 0.1 сот. Компания ИСК "ВИТА" представляет свой новый проект жилой комплекс "Фёдоровское". Всего в 3,5 километрах от Павловска. Проектом предусмотрено строительство 41 дома, в состав которого входят 9 типовых современных решений с большим разнообразием планировок. Двухэтажные квартиры, площадью от 63,8 кв.м до 103,3 кв.м. с отдельным входом, парковочным местом и зоной индивидуального отдыха.
+        p Общественный транспорт: Доехать до ЖК "Фёдоровское" на общественном транспорте можно несколькими способами: 1  Маршрутное такси от станции метро Купчино 521 2  От железнодорожной станции Купчино до Павловск (вокзал), далее автобусы 493 или 618, маршрутное такси 521
+        p Собственный транспорт: 30 минут от КАД по Московскому шоссе или по Витебскому проспекту через г. Пушкин и г. Павловск
+        p Благоустройство: Жилой комплекс "Фёдоровское" представляет собой закрытую территорию с 6 выездами/въездами со шлагбаумами, что добавляет ощущение собственного городка, где все "свои". Предусмотрено устройство на территории комплекса двух детских игровой и спортивной площадок общей площадью 616.00 кв.м.
+      article.itemCard-block
+        h3.itemCard-block__title Характеристики
+        .itemCard-block-row
+          p.itemCard-block-row__key Площадь
+          .itemCard-block-row__dash
+          p.itemCard-block-row__value 24 сот.
+        .itemCard-block-row
+          p.itemCard-block-row__key Газ
+          .itemCard-block-row__dash
+          p.itemCard-block-row__value Есть
+        .itemCard-block-row
+          p.itemCard-block-row__key Вода
+          .itemCard-block-row__dash
+          p.itemCard-block-row__value Скважина
+        .itemCard-block-row
+          p.itemCard-block-row__key Электричество
+          .itemCard-block-row__dash
+          p.itemCard-block-row__value 10 кВт
+      article.itemCard-block
+        h3.itemCard-block__title Расположение на карте
+        #itemCard-block__map
+  section.earlier
+    .container.earlier-container
+      h3.default__title Вы раньше смотрели
+      .items-grid
+        include ../common/card
+        include ../common/card
+        include ../common/card
+  include ../common/putCall

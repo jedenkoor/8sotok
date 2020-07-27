@@ -1,0 +1,116 @@
+.banner{
+  height: 576px;
+  display: flex;  
+  align-items: center;
+  position: relative;
+  &-bg{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    left: calc(50% - 105px);
+    top: 0;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &-desc{
+    max-width: calc(50% - 125px);
+    &__title{
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 125%;
+      color: var(--dark);
+      margin-bottom: 40px;
+    }
+    &__text{
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--half);
+    }
+  }
+}
+
+.type{
+  @include ptpb;
+  &-top{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px 400px;
+    gap: 40px;
+  }
+  &-card{
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-desc{
+      margin-top: auto;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      &-left{
+        &__title{
+          margin-bottom: 10px;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 150%;
+          color: #FFFFFF;
+        }
+        &__text{
+          font-size: 14px;
+          color: #FFFFFF;
+          line-height: 150%;
+        }
+      }
+      &__link{
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+
+.advantages{
+  background-color: rgba(24, 24, 24, 0.05);
+  @include ptpb;
+  &-container{
+    display: flex;
+  }
+  &-item{
+    width: calc(100% / 3);
+    padding-right: 24px;
+    &__title{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 125%;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    &__text{
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--half);
+    }
+  }
+}
+
+
+.best{
+  @include mtmb;
+  &-container{
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn{
+    margin: 40px auto 0;
+  }
+}

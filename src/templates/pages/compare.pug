@@ -1,0 +1,19 @@
+extends ../template
+block title
+  | Сравнение | 8 соток
+block content
+  section.breadcrumbs
+    .container
+      .breadcrumbs-row
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Сравнение
+  section.container
+    h1.default__title Сравнение
+    .compare#compare
+      .compare-aside
+        .compare-aside-ceil.compare-aside-ceil_head
+          label
+            input(type="checkbox")
+            p Показать только отличия
+          p Стоимость
+      .compare-content

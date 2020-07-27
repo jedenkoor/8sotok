@@ -1,0 +1,217 @@
+section.filter
+  form.container.filter-container
+    .filter-main
+      .inpBlock.inpBlock_160
+        .inpBlock__title Тип недвижимости
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Участок
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="typeNedvizh" value="Участок" checked)
+                p Участок
+              label
+                input(type="checkbox" name="typeNedvizh" value="Поселок")
+                p Поселок
+              label
+                input(type="checkbox" name="typeNedvizh" value="Дома")
+                p Дома
+              label
+                input(type="checkbox" name="typeNedvizh" value="Таунхаусы")
+                p Таунхаусы
+      .inpBlock.inpBlock_200
+        .inpBlock__title Расположение
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Санкт-Петербург
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="radio" name="where" value="Санкт-Петербург" checked)
+                p Санкт-Петербург
+              label
+                input(type="radio" name="where" value="Москва")
+                p Москва
+              label
+                input(type="radio" name="where" value="Ярославль")
+                p Ярославль
+              label
+                input(type="radio" name="where" value="Воронеж")
+                p Воронеж
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-box-inps
+            input(type="text" size="1" value="5")
+            p —
+            input(type="text" size="1" value="12")
+            p Соток
+      .inpBlock.inpBlock_380.inpBlock_price
+        .inpBlock__title Стоимость
+        .inpBlock-box
+          .inpBlock-box-inps
+            input(type="text" size="1" value="70 000")
+            p —
+            input(type="text" size="1" value="100 000")
+          .inpBlock-select
+            .inpBlock-select-view
+              span руб/сотка
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="radio" name="where" value="руб/сотка" checked)
+                p руб/сотка
+              label
+                input(type="radio" name="where" value="$/сотка")
+                p $/сотка
+              label
+                input(type="radio" name="where" value="EURO/сотка")
+                p EURO/сотка
+              label
+                input(type="radio" name="where" value="Воронеж")
+                p Воронеж
+      .inpBlock.inpBlock_190
+        .inpBlock__title Коммуникации
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="radio" name="where" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="radio" name="where" value="Газ")
+                p Газ
+              label
+                input(type="radio" name="where" value="Вода")
+                p Вода
+              label
+                input(type="radio" name="where" value="Канализация")
+                p Канализация
+      button(type="submit").btn Найти
+    .filter-bot
+      button.filter-bot__more
+        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L4 4L7 1" stroke="#181818" stroke-opacity="0.5" stroke-width="1.5"/>
+        </svg>
+      button.filter-bot__reset Сбросить
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1L4 4M1 7L4 4M4 4L1 1M4 4L7 7" stroke="black" stroke-opacity="0.5"/>
+        </svg>
+      a(href="#").filter-bot__map
+        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.9165 5.49999V20.1667L8.33317 16.5L15.6665 20.1667L22.0832 16.5V1.83333L15.6665 5.49999L8.33317 1.83333L1.9165 5.49999Z" stroke="#181818" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8.3335 1.83333V16.5" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15.6665 5.5V20.1667" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        | Показать на карте
+    .filter-sub
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="checkbox" name="" value="Газ")
+                p Газ
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="checkbox" name="" value="Газ")
+                p Газ
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="checkbox" name="" value="Газ")
+                p Газ
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="checkbox" name="" value="Газ")
+                p Газ
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="checkbox" name="" value="Газ")
+                p Газ
+      .inpBlock
+        .inpBlock__title Площадь
+        .inpBlock-box
+          .inpBlock-select
+            .inpBlock-select-view
+              span Электричество
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L4 4L7 1" stroke="black" stroke-width="1.5"/>
+              </svg>
+            .inpBlock-select-list
+              label
+                input(type="checkbox" name="" value="Электричество" checked)
+                p Электричество
+              label
+                input(type="checkbox" name="" value="Газ")
+                p Газ

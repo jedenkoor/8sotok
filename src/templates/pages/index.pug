@@ -1,0 +1,65 @@
+extends ../template
+block title
+  | Главная | 8 соток
+block content
+  section.banner
+    .banner-bg
+      img(src="assets/images/banner-bg.jpg" alt="Загородная недвижимость")
+    .container
+      .banner-desc
+        h1.banner-desc__title Агентство<br>загородной<br>недвижимости
+        p.banner-desc__text Более 10 000 предложений на одном сайте<br>с удобной фильтрацией и помощью в поиске
+  include ../common/filter
+  section.type
+    .container.type-container
+      .type-top
+        h2.default__title.type-top__title Тип недвижимости
+        a(href="#").btn.btn_white.type-top__all Смотреть все
+      .type-grid
+        a(href="#" style="background-image: url('assets/images/type-1.jpg');").type-card
+          .type-card-desc
+            .type-card-desc-left
+              p.type-card-desc-left__title Участок
+              p.type-card-desc-left__text 1447 объектов
+            .btn.btn_white.btn_medium.type-card-desc__link Смотреть раздел
+        a(href="#" style="background-image: url('assets/images/type-2.jpg');").type-card
+          .type-card-desc
+            .type-card-desc-left
+              p.type-card-desc-left__title Участок
+              p.type-card-desc-left__text 1447 объектов
+            .btn.btn_white.btn_medium.type-card-desc__link Смотреть раздел
+        a(href="#" style="background-image: url('assets/images/type-3.jpg');").type-card
+          .type-card-desc
+            .type-card-desc-left
+              p.type-card-desc-left__title Участок
+              p.type-card-desc-left__text 1447 объектов
+            .btn.btn_white.btn_medium.type-card-desc__link Смотреть раздел
+        a(href="#" style="background-image: url('assets/images/type-4.jpg');").type-card
+          .type-card-desc
+            .type-card-desc-left
+              p.type-card-desc-left__title Участок
+              p.type-card-desc-left__text 1447 объектов
+            .btn.btn_white.btn_medium.type-card-desc__link Смотреть раздел
+  section.advantages
+    .container.advantages-container
+      .advantages-item
+        p.advantages-item__title Вся недвижимость<br>в одном месте
+        p.advantages-item__text Более 10 000 предложений на одном сайте<br>с удобной фильтрацией и помощью в поиске
+      .advantages-item
+        p.advantages-item__title Персональный<br>подбор предложений
+        p.advantages-item__text Более 10 000 предложений на одном сайте<br>с удобной фильтрацией и помощью в поиске
+      .advantages-item
+        p.advantages-item__title Эксклюзивные<br>предложения от партнёров
+        p.advantages-item__text Более 10 000 предложений на одном сайте<br>с удобной фильтрацией и помощью в поиске
+  section.best
+    .container.best-container
+      h3.default__title Лучшие предложения
+      .items-grid
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+      a(href="#").btn.btn_white.best__btn Смотреть все предложения
+  include ../common/putCall

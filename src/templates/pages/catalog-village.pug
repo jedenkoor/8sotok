@@ -1,0 +1,29 @@
+extends ../template
+block title
+  | Каталог | 8 соток
+block content
+  section.breadcrumbs
+    .container
+      .breadcrumbs-row
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Посёлки
+  section.container
+    h1.default__title Посёлки
+  include ../common/filter
+  section.catalog
+    .container.catalog-container
+      .catalog-top
+        p.catalog-top__result Найдено 357 вариантов
+        // sort
+      .items-grid
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+      a(href="#").btn.btn_white.catalog__btn Показать еще
+  include ../common/putCall

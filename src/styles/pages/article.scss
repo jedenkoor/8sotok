@@ -1,0 +1,116 @@
+.article{
+  margin-bottom: 100px;
+  &__status{
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--half);
+    background: #FFFFFF;
+    border: 1px solid var(--half);
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &-topRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__time{
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 125%;
+      color: var(--quarter);
+      svg{
+        margin-right: 10px;
+      }
+    }
+  }
+  &-botRow{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &__text{
+      font-size: 16px;
+      line-height: 18px;
+      color: var(--quarter);
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+    }
+  }
+  .default__title{
+    margin-bottom: 20px;
+  }
+  &-banner{
+    width: 100%;
+    height: 536px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &-ROW{
+    display: flex;
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+    &_with{
+      .article-content{
+        max-width: 800px;
+        margin-right: 20px;
+      }
+    }
+  }
+  &-content{
+    max-width: 900px;
+    h2, h3, h4, h5, h6{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 150%;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 18px;
+      line-height: 150%;
+      &:not(:last-child){
+        margin-bottom: 27px;
+      }
+    }
+  }
+  &-aside{
+    width: 325px;
+    margin-left: auto;
+    &__title{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+    .blog-item{
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+      &-top{
+        &__img{
+          height: 250px;
+        }
+      }
+      &-desc{
+        padding: 16px;
+        &__title{
+          font-size: 20px;
+          line-height: 125%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

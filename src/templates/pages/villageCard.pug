@@ -1,0 +1,128 @@
+extends ../template
+block title
+  | Карточка участка | 8 соток
+block content
+  section.breadcrumbs
+    .container
+      .breadcrumbs-row
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Карточка поселка
+  section.village
+    .container
+      .village-main
+        .village-slider-outer
+          .village-slider-arr
+            button.village-slider-arr__arr.village-slider-arr_prev
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13L1 7L7 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            button.village-slider-arr__arr.village-slider-arr_next
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 7L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          .village-slider
+            .village-slider__slide
+              img(src="assets/images/village.jpg", alt="КП “Дворцовые предместья”")
+            .village-slider__slide
+              img(src="assets/images/village.jpg", alt="КП “Дворцовые предместья”")
+            .village-slider__slide
+              img(src="assets/images/village.jpg", alt="КП “Дворцовые предместья”")
+        .village-info
+          h1.village-info__title КП “Дворцовые предместья”
+          .village-info-row
+            p.village-info-row__address
+              <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 5.44444C9.5 7.21061 8.34578 9.23335 7.10121 10.879C6.48979 11.6874 5.87719 12.3784 5.41708 12.8675C5.2571 13.0375 5.1159 13.1828 5 13.2997C4.88411 13.1828 4.7429 13.0375 4.58292 12.8675C4.12281 12.3784 3.51021 11.6874 2.89879 10.879C1.65422 9.23335 0.5 7.21061 0.5 5.44444C0.5 2.67277 2.55395 0.5 5 0.5C7.44605 0.5 9.5 2.67277 9.5 5.44444Z" stroke="black" stroke-opacity="0.5"/>
+                <circle cx="5" cy="5" r="1.5" stroke="black" stroke-opacity="0.5"/>
+              </svg>
+              | Ломоносовский район
+            a(href="#").village-info-row__map На карте
+          .village-info-block.village-info-block_grid
+            .village-info-block-item
+              p.village-info-block-item__title Электричество
+              p.village-info-block-item__text
+                <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.7778 1L1 16H12.5L11.2222 26L24 11H12.5L13.7778 1Z" stroke="#DA4302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                | 10 кВт
+            .village-info-block-item
+              p.village-info-block-item__title Газ
+              p.village-info-block-item__text
+                <svg width="20" height="27" viewBox="0 0 20 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.00086 18.6798C0.933587 14 4.84351 7.70615 4.84351 7.70615C4.84351 7.70615 4.81735 9.82299 5.48396 11.364C6.15733 12.9207 6.76485 13.193 6.76485 13.193C6.76485 13.193 6.99356 9.70933 8.6862 6.48685C11.248 1.60965 15.7311 1 15.7311 1C15.7311 1 11.8884 3.4386 13.1693 7.0965C16.3716 11.364 18.9334 12.182 18.9334 18.0702C18.9334 21.7281 15.4336 25.9956 9.96709 25.9956C4.93359 25.9956 1.05704 22.5883 1.00086 18.6798Z" stroke="#DA4302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                | Есть
+            .village-info-block-item
+              p.village-info-block-item__title Дороги
+              p.village-info-block-item__text
+                <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 25.2105C1 24.7263 5.84211 8.86842 8.26316 1" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M16.7368 1C16.7368 1.48421 21.5789 17.3421 24 25.2105" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12.5 1V3.42105" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12.5 8.26315V10.6842" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12.5 15.5263V17.9474" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12.5 22.7895V25.2105" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                | Грунт
+            .village-info-block-item
+              p.village-info-block-item__title Вода
+              p.village-info-block-item__text
+                <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9287 20.5714C10.9287 20.5714 12.184 19.7023 12.8573 18.6429C13.5439 17.5624 13.5001 16.0714 13.5001 16.0714" stroke="#DA4302" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <mask id="path-2-inside-1" fill="white">
+                  <path d="M18 16.7143C18 21.6848 13.9706 25.7143 9 25.7143C4.02944 25.7143 0 21.6848 0 16.7143C0 12.6425 6.03953 4.02551 8.22364 1.04242C8.61237 0.511488 9.38763 0.511488 9.77636 1.04242C11.9605 4.02551 18 12.6425 18 16.7143Z"/>
+                  </mask>
+                  <path d="M8.22364 1.04242L6.60994 -0.139081L8.22364 1.04242ZM16 16.7143C16 20.5803 12.866 23.7143 9 23.7143V27.7143C15.0751 27.7143 20 22.7894 20 16.7143H16ZM9 23.7143C5.13401 23.7143 2 20.5803 2 16.7143H-2C-2 22.7894 2.92487 27.7143 9 27.7143V23.7143ZM2 16.7143C2 16.1075 2.24729 15.1073 2.82132 13.7428C3.37437 12.4281 4.14992 10.9601 5.0174 9.48284C6.75058 6.53141 8.76134 3.69355 9.83735 2.22392L6.60994 -0.139081C5.50183 1.37438 3.40078 4.33655 1.56815 7.45733C0.652741 9.0162 -0.218098 10.6523 -0.865712 12.1917C-1.49235 13.6813 -2 15.2852 -2 16.7143H2ZM8.16265 2.22392C9.23866 3.69355 11.2494 6.53141 12.9826 9.48284C13.8501 10.9601 14.6256 12.4281 15.1787 13.7428C15.7527 15.1073 16 16.1075 16 16.7143H20C20 15.2852 19.4924 13.6813 18.8657 12.1917C18.2181 10.6523 17.3473 9.0162 16.4318 7.45733C14.5992 4.33655 12.4982 1.37438 11.3901 -0.139081L8.16265 2.22392ZM9.83735 2.22392C9.42705 2.78432 8.57295 2.78432 8.16265 2.22392L11.3901 -0.139081C10.2023 -1.76135 7.7977 -1.76135 6.60994 -0.139081L9.83735 2.22392Z" fill="#DA4302" mask="url(#path-2-inside-1)"/>
+                </svg>
+                | Скважина
+            .village-info-block-item
+              p.village-info-block-item__title Статус земли
+              p.village-info-block-item__text
+                <svg width="22" height="27" viewBox="0 0 22 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.25 1H3.5C2.83696 1 2.20107 1.26339 1.73223 1.73223C1.26339 2.20107 1 2.83696 1 3.5V23.5C1 24.163 1.26339 24.7989 1.73223 25.2678C2.20107 25.7366 2.83696 26 3.5 26H18.5C19.163 26 19.7989 25.7366 20.2678 25.2678C20.7366 24.7989 21 24.163 21 23.5V9.75L12.25 1Z" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12.25 1V9.75H21" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                | ИЖС
+            .village-info-block-item
+              p.village-info-block-item__title Канализация
+              p.village-info-block-item__text
+                <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.7778 14.8889H22.6111C23.3782 14.8889 24 14.2671 24 13.5V13.5C24 12.7329 23.3782 12.1111 22.6111 12.1111H9.33333V2C9.33333 1.44772 8.88562 1 8.33333 1H2C1.44772 1 1 1.44772 1 2V11C1 12.5341 2.24365 13.7778 3.77778 13.7778V13.7778C4.0846 13.7778 4.33333 14.0265 4.33333 14.3333V26C6.92593 26 12.2222 26 12.6667 26V22.5556C12.6667 22.0033 13.1144 21.5556 13.6667 21.5556H16.7778C19.5392 21.5556 21.7778 19.317 21.7778 16.5556V14.8889ZM21.7778 14.8889H9.33333" stroke="#DA4302" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                | Есть
+          .village-info-block
+            .village-info-block__img
+              img(src="assets/images/granat.jpg", alt="Гранат")
+            .village-info-block-who
+              p.village-info-block-who__status Застройщик
+              p.village-info-block-who__name Гранат
+            a(href="#").btn.btn_white.btn_medium.village-info-block__btn Показать телефон
+      .village-desc
+        .village-desc-content
+          h2.village-desc-content__title Описание
+          p Продается таунхаус в КП Фёдоровское, общей площадью 82.80 кв.м., участок 0.1 сот. Компания ИСК "ВИТА" представляет свой новый проект жилой комплекс "Фёдоровское". Всего в 3,5 километрах от Павловска. Проектом предусмотрено строительство 41 дома, в состав которого входят 9 типовых современных решений с большим разнообразием планировок. Двухэтажные квартиры, площадью от 63,8 кв.м до 103,3 кв.м. с отдельным входом, парковочным местом и зоной индивидуального отдыха.
+          p Общественный транспорт: Доехать до ЖК "Фёдоровское" на общественном транспорте можно несколькими способами: 1  Маршрутное такси от станции метро Купчино 521 2  От железнодорожной станции Купчино до Павловск (вокзал), далее автобусы 493 или 618, маршрутное такси 521
+          p Собственный транспорт: 30 минут от КАД по Московскому шоссе или по Витебскому проспекту через г. Пушкин и г. Павловск
+          p Благоустройство: Жилой комплекс "Фёдоровское" представляет собой закрытую территорию с 6 выездами/въездами со шлагбаумами, что добавляет ощущение собственного городка, где все "свои". Предусмотрено устройство на территории комплекса двух детских игровой и спортивной площадок общей площадью 616.00 кв.м.
+        form.village-desc-form
+          .village-desc-form__title Оставьте заявку на просмотр участка
+          input(type="text" data-required="" placeholder="Ваше имя").village-desc-form__input
+          input(type="text" data-required="" placeholder="Телефон" data-type="tel").village-desc-form__input
+          button(type="submit").btn Оставить заявку
+  include ../common/filter
+  section.catalog.catalog_mb
+    .container.catalog-container
+      .catalog-top
+        p.catalog-top__result Найдено 357 вариантов
+        // sort
+      .items-grid
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+      a(href="#").btn.btn_white.catalog__btn Смотреть все предложения

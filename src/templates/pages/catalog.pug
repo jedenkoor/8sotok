@@ -1,0 +1,35 @@
+extends ../template
+block title
+  | Каталог | 8 соток
+block content
+  section.breadcrumbs
+    .container
+      .breadcrumbs-row
+        a(href="#").breadcrumbs__item Главная
+        a(href="#").breadcrumbs__item Каталог участков
+  section.container
+    h1.default__title Участки
+  include ../common/filter
+  section.catalog
+    .container.catalog-container
+      .catalog-top
+        p.catalog-top__result Найдено 357 вариантов
+        // sort
+      .items-grid
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+        include ../common/card
+      a(href="#").btn.btn_white.catalog__btn Показать еще
+      .catalog-about
+        .catalog-about-desc
+          h2.catalog-about-desc__title Загородная недвижимость
+          p.catalog-about-desc__text На рынок недвижимости надвигается очередная беда, не до пустых разговоров теперь. Из-за перехода на новую схему финансирования подают объемы вывода на рынок новых многоэтажных проектов, особенно в регионах, в которых застройщики просто не хотят ничего строить. На загородном рынке никаких важных новостей не случилось. Впрочем, есть одно важное изменение, но оно случилось в начале осени: Петростат (ну и федеральный Росстат) стал учитывать в статистике по вводу домов также дома, построенные на садовых участках. Что, безусловно, улучшает официальные показатели (+500 тыс. кв. м по России в январе-октябре). Однако в последних опубликованных данных Петростата по Ленобласти, январь-ноябрь этого года, учтен только ОДИН дом на садовом участке (площадью 100 кв. м) — так что пока показатели садового строительства выглядят очень скромными.
+        .catalog-about-img
+          img(src="assets/images/catalog-about.svg", alt="Загородная недвижимость")
+
