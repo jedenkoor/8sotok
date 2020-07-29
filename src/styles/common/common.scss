@@ -42,10 +42,14 @@ svg{
 }
 
 body{
+  font-family: 'Ubuntu', sans-serif;
   display: flex;
   flex-direction: column;
   background-color: var(--bg);
   min-height: 100vh;
+  &.fixed{
+    overflow: hidden;
+  }
 }
 
 .container{
@@ -67,6 +71,7 @@ body{
   height: 40px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding-right: 32px;
   padding-left: 32px;
   transition: .3s;
@@ -105,11 +110,13 @@ body{
   &-row{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__item{
     font-size: 14px;
     line-height: 125%;
     color: var(--quarter);
+    white-space: nowrap;
     &:not(:last-child):after{
       content: '>';
       color: inherit;
@@ -222,6 +229,64 @@ body{
         padding-right: 24px;
         padding-left: 24px;
       }
+    }
+  }
+}
+
+@include w1024{
+	.items-grid{
+		grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+	}
+	.items-el{
+		&-desc{
+			&-bot{
+				&__btn{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@include w768{
+  .btn{
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+  .default__title{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .items-el{
+    &-top{
+      height: 270px;
+    }
+    &-desc{
+      &__title{
+        font-size: 18px;
+      }
+      &-bot{
+        &__char{
+          width: 50%;
+          &:first-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include w480{
+  .default__title{
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .items{
+    &-grid{
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

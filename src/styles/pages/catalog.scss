@@ -48,3 +48,43 @@
     }
   }
 }
+
+@include w1024{
+  .catalog{
+    &-about{
+      flex-direction: column-reverse;
+      &-desc{
+        flex: auto
+      }
+      &-img{
+        flex: auto;
+        width: 60%;
+        margin: 0 auto 40px;
+      }
+    }
+  }
+}
+
+@include w768{
+  .catalog-about-desc__title{
+    font-size: 30px;
+  }
+}
+
+@include w480{
+  .catalog{
+    &-about{
+      margin-top: 60px;
+      &-desc{
+        &__title{
+          font-size: 24px;
+          margin-bottom: 20px;
+          line-height: 26px;
+        }
+      }
+      &-img{
+        width: 100%;
+      }
+    }
+  }
+}

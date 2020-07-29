@@ -1,7 +1,4 @@
 .blog{
-  &-container{
-
-  }
   &-filter{
     display: flex;
     margin-bottom: 40px;
@@ -20,6 +17,7 @@
         color: var(--half);
         cursor: pointer;
         transition: .3s;
+        white-space: nowrap;
       }
     }
   }
@@ -53,9 +51,6 @@
         font-size: 16px;
         line-height: 18px;
         text-align: center;
-
-        /* --50 */
-
         color: var(--half);
       }
       &__img{
@@ -96,6 +91,62 @@
         color: var(--quarter);
         svg{
           margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include w1024{
+  .blog{
+    &-filter{
+      margin: 0 -20px 20px;
+      padding: 0 20px 20px;
+      border-bottom: 1px solid #E2E2EB;
+      overflow: auto;
+      &:after{
+        content: '';
+        flex: 0 0 20px;
+      }
+    }
+    &-grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include w768{
+  .blog{
+    &-grid{
+      grid-gap: 20px;
+    }
+    &-item{
+      &-top{
+        &__img{
+          height: 270px;
+        }
+      }
+      &-desc{
+        &__title{
+          font-size: 18px;
+        }
+        &__text{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include w480{
+  .blog{
+    &-grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-item{
+      &-top{
+        &__img{
+          height: 245px;
         }
       }
     }

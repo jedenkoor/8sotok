@@ -1,15 +1,12 @@
-function showBillet(billet){
+function showBillet(billet) {
   billet.addClass('billet_active');
 }
-function hideBillet(billet){
+function hideBillet(billet) {
   billet.removeClass('billet_active');
 }
 
-$(document).ready(function(){
-  
-
-
-  if($('.itemCard-slider').length){
+$(document).ready(function () {
+  if ($('.itemCard-slider').length) {
     $('.itemCard-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -18,7 +15,7 @@ $(document).ready(function(){
     })
   }
 
-  if($('.village-slider').length){
+  if ($('.village-slider').length) {
     $('.village-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -27,21 +24,18 @@ $(document).ready(function(){
     })
   }
 
-  if($('#itemCard-block__map').length){
+  if ($('#itemCard-block__map').length) {
     ymaps.ready(init);
-    function init(){
-        var myMap = new ymaps.Map("itemCard-block__map", {
-            center: [55.76, 37.64],
-            zoom: 7
-        });
+    function init() {
+      var myMap = new ymaps.Map("itemCard-block__map", {
+        center: [55.76, 37.64],
+        zoom: 7
+      });
     }
   }
 
-
-  if($('#compare').length){
+  if ($('#compare').length) {
     //! Делаем запрос по api получаем объекты для сравнения в таком формате
-
-
     var arr = [{
       img: 'assets/images/itemCompare.jpg',
       price: '120 000 000',
@@ -50,7 +44,7 @@ $(document).ready(function(){
         'Метро': 'Комендантский проспект',
         'Ипотека': 'Да',
       }
-    },{
+    }, {
       img: 'assets/images/itemCompare.jpg',
       price: '1 000 000',
       options: {
@@ -58,7 +52,7 @@ $(document).ready(function(){
         'Метро': 'Комендантский проспект',
         'Выход на улицу': 'Конечно',
       }
-    },{
+    }, {
       img: 'assets/images/itemCompare.jpg',
       price: '1 000 000',
       options: {
@@ -69,18 +63,18 @@ $(document).ready(function(){
     }]
     var KEYS = new Set();
 
-    for(let item in arr){ //** Создаем SET с уникальными ключами для вывода их в левом aside **//
-      for(let option in arr[item].options){
+    for (let item in arr) { //** Создаем SET с уникальными ключами для вывода их в левом aside **//
+      for (let option in arr[item].options) {
         KEYS.add(option);
       }
     }
     KEYS = [...KEYS] //** SET преобразовываем в массив
-    
-    for(let key in KEYS){  //** Пробегаем по массиву и добавляем эти ключи в левый столбик 
+
+    for (let key in KEYS) {  //** Пробегаем по массиву и добавляем эти ключи в левый столбик 
       $('.compare-aside').append($(`<div class="compare-aside-ceil">${KEYS[key]}</div>`))
     }
 
-    for(let item in arr){ //** Пробегаем по сравниваемым объектам и выводим ячейку_head
+    for (let item in arr) { //** Пробегаем по сравниваемым объектам и выводим ячейку_head
       $('.compare-content').append($(
         `<div class="compare-content-item" data-num="${item}">
           <div class="compare-content-item-ceil compare-content-item-ceil_head">
@@ -100,10 +94,10 @@ $(document).ready(function(){
           </div>
         </div>`))
     }
-    for(let item in arr){ //** пробегаем по объектам и каждому выставляем значения для ключей
-      for(let key in KEYS){
-        if(arr[item].options[KEYS[key]] == undefined){
-          
+    for (let item in arr) { //** пробегаем по объектам и каждому выставляем значения для ключей
+      for (let key in KEYS) {
+        if (arr[item].options[KEYS[key]] == undefined) {
+
           $(`.compare-content-item[data-num="${item}"]`).append(
             $(`<div class="compare-content-item-ceil compare-content-item-ceil_empty">Не указано</div>`)
           )
@@ -116,8 +110,8 @@ $(document).ready(function(){
     }
 
 
-    $(document).on('mouseover', '.compare-aside-ceil:not(.compare-aside-ceil_head), .compare-content-item-ceil:not(.compare-content-item-ceil_head)', function(){
-      $('.hoverCeil').each(function(){
+    $(document).on('mouseover', '.compare-aside-ceil:not(.compare-aside-ceil_head), .compare-content-item-ceil:not(.compare-content-item-ceil_head)', function () {
+      $('.hoverCeil').each(function () {
         $(this).removeClass('hoverCeil');
       })
       var ind = $(this).index() + 1;
@@ -125,17 +119,17 @@ $(document).ready(function(){
       $(`.compare-aside .compare-aside-ceil:nth-child(${ind})`).addClass('hoverCeil');
     })
 
-    $(document).on('change', '.compare-aside-ceil_head input', function(){
+    $(document).on('change', '.compare-aside-ceil_head input', function () {
       var cols = $('.compare-content-item');
-      if($(this).prop('checked') == true){
-        $('.compare-content-item:nth-child(1) .compare-content-item-ceil:not(.compare-content-item-ceil_head)').each(function(){
+      if ($(this).prop('checked') == true) {
+        $('.compare-content-item:nth-child(1) .compare-content-item-ceil:not(.compare-content-item-ceil_head)').each(function () {
           var indCeil = $(this).index() + 1;
           flag = 1;
-          for(let i = 1; i <= cols.length; i++){
-            if($(this).html() != $(`.compare-content-item:nth-child(${i}) .compare-content-item-ceil:nth-child(${indCeil})`).html()){
+          for (let i = 1; i <= cols.length; i++) {
+            if ($(this).html() != $(`.compare-content-item:nth-child(${i}) .compare-content-item-ceil:nth-child(${indCeil})`).html()) {
               flag = 0;
               break;
-            } 
+            }
           }
           if (flag == 1) {
             console.log(indCeil);
@@ -144,14 +138,14 @@ $(document).ready(function(){
           }
         })
       } else {
-        $('.dnCeil').each(function(){
+        $('.dnCeil').each(function () {
           $(this).removeClass('dnCeil');
         })
       }
     })
 
 
-    $(document).on('click', '.compare-content-item-ceil__close', function(){
+    $(document).on('click', '.compare-content-item-ceil__close', function () {
       $(this).closest('.compare-content-item').remove();
 
       //! Обработчик удаления из массива объектов для сравнения
@@ -159,55 +153,52 @@ $(document).ready(function(){
 
 
     //! высоту ячеек по самой большой
-    
+
 
 
     //* DRAG-SCROLL
     var clicked = false, clickX;
     $('.compare-content').on({
-      'mousemove': function(e) {
+      'mousemove': function (e) {
         clicked && updateScrollPos(e);
       },
-      'mousedown': function(e) {
+      'mousedown': function (e) {
         clicked = true;
         clickX = e.pageX;
       },
     });
     $(document).on({
-      'mouseup': function() {
+      'mouseup': function () {
         clicked = false;
         $('.compare-content').css('cursor', 'grab');
       }
     })
-    var updateScrollPos = function(e) {
+    var updateScrollPos = function (e) {
       $('.compare-content').css('cursor', 'grabbing');
       $('.compare-content').scrollLeft($('.compare-content').scrollLeft() + (clickX - e.pageX));
     }
   }
 
-
-
-  $(document).on('click', '[data-compare=""]', function(e){
+  $(document).on('click', '[data-compare=""]', function (e) {
     e.preventDefault();
     hideBillet($('.billet_active'));
     showBillet($('.billet_compare'));
   })
 
-  $(document).on('click', '[data-favourites=""]', function(e){
+  $(document).on('click', '[data-favourites=""]', function (e) {
     e.preventDefault();
     hideBillet($('.billet_active'));
     showBillet($('.billet_favourites'));
   })
 
-  $(document).on('click', '.billet__close', function(e){
+  $(document).on('click', '.billet__close', function (e) {
     e.preventDefault();
     hideBillet($(this).closest('.billet'))
   })
 
-
-  $(document).on('click', '.putCall__btn', function(e){
+  $(document).on('click', '.putCall__btn', function (e) {
     e.preventDefault();
-    if(raValidation($(this).closest('form'))){
+    if (raValidation($(this).closest('form'))) {
       $(this).closest('.putCall-form').hide();
       $(this).closest('.putCall-form').next('.putCall-success').show().css('display', 'flex');
       $(this).closest('.putCall-form').next('.putCall-success').find('span').html(
@@ -216,54 +207,73 @@ $(document).ready(function(){
     }
   })
 
-  $(document).on('click', '.putCall-success__btn', function(e){
+  $(document).on('click', '.putCall-success__btn', function (e) {
     e.preventDefault();
     $(this).closest('.putCall-success').hide();
     $(this).closest('.putCall-success').prev('.putCall-form').show();
 
   })
 
-  if($('.filter-sub').length){
+  if ($('.filter-sub').length) {
     $('.filter-sub').slideUp();
   }
-  $(document).on('click', '.filter-bot__more', function(e){
+  $(document).on('click', '.filter-bot__more', function (e) {
     e.preventDefault();
     $(this).toggleClass('filter-bot__more_down');
-    $('.filter-sub').slideToggle();
+    $('.filter-sub').toggleClass('active');
   })
 
-
-  $(document).on('click', function (e){
-		var div = $('.inpBlock-select_active');
-		if (!div.is(e.target) && div.has(e.target).length === 0) {
+  $(document).on('click touchstart', function (e) {
+    var div = $('.inpBlock-select_active');
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
       div.removeClass('inpBlock-select_active');
-      div.find('.inpBlock-select-list').fadeOut();
-		}
-	});
+      div.find('.inpBlock-select-list').fadeOut('fast');
+    }
+  });
 
-  $(document).on('click', '.inpBlock-select-view', function(){
+  $(document).on('click', '.inpBlock-select-view', function () {
     $(this).closest('.inpBlock-select').toggleClass('inpBlock-select_active')
-    $(this).next('.inpBlock-select-list').fadeToggle()
+    $(this).next('.inpBlock-select-list').fadeToggle('fast')
   })
 
-
-  $(document).on('click', '.inpBlock-select-list p', function(){
+  $(document).on('click', '.inpBlock-select-list p', function () {
     var select = $(this).closest('.inpBlock-select');
     var view = select.find('.inpBlock-select-view');
     var list = select.find('.inpBlock-select-list');
 
     var str = '';
-    list.find('input[type="checkbox"]:checked').each(function(e, cb){
-      //console.log($(this).next('p').innerHTML());
-      //console.log($(this));
-      
-      
+    list.find('input[type="checkbox"]:checked').each(function (e, cb) {
       str += $(this).next('p').html() + ', ';
     })
-    function cb (){
+    function cb() {
       console.log(str);
 
     }
-    
-  })
-}); 
+
+  });
+
+  resizewindow();
+  $(window).resize(function (e) {
+    resizewindow();
+  });
+});
+
+function resizewindow() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+/*Моб. Меню*/
+$(document).on('click', '.header-dop__burger', function () {
+  $('.header').toggleClass('active');
+  $('body').toggleClass('fixed');
+});
+/*Моб. Меню Конец*/
+
+
+/*Меню мобайл футер*/
+$(document).on('click', '.footer-left-col__title', function () {
+  $(this).toggleClass('active');
+  $(this).next().slideToggle()
+});
+/*Меню мобайл футер Конец*/
