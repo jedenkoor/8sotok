@@ -1,2 +1,1 @@
-# GULP-Template
- Шаблон для быстрого старта работ по верстке
+# https://jedenkoor.github.io/8sotok/current/index.html
